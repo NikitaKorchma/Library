@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  database: library_development
+  pool: 5
+  timeout: 5000
+  username: nick
+  password: maverick
+
+test:
+  adapter: postgresql
+  database: library_test
+  pool: 5
+  timeout: 5000
+  username: nick
+  password: maverick
+
+production:
+  adapter: postgresql
+  database: library_production
+  pool: 5
+  timeout: 5000
