@@ -1,0 +1,17 @@
+.row.mt-2
+  .col-5
+    = image_tag @book.image.url(:image_show), class: 'img-show'
+    %h4.mt-2
+      Author:
+      = render @book.authors
+    %h5
+      Category:
+      = @book.category.name
+  .col-7
+    %h3
+      Title:
+      = @book.title
+    %h4 Description:
+    %p= @book.description
+
+

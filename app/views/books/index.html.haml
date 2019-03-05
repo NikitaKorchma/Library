@@ -1,0 +1,13 @@
+-if params[:category]
+  %h2.p-2.mb-2.bg-info.text-white.text-center.rounded.mt-2
+    = params[:category]
+
+.row
+  - @books.each do |book|
+    .col-3.mt-2
+      .card
+        = link_to book_path(book) do
+          = image_tag book.image.url(:image_index), class: 'card-img-top img-index'
+        .card-body
+          %h4.card-title
+            = truncate(book.title, length: 18)

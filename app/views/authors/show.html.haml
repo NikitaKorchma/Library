@@ -1,0 +1,15 @@
+.row.mt-4.mb-4
+  .col-3
+    = image_tag @author.avatar.url(:avatar_img), class: 'author-avatar'
+  .col-6
+    %h3= @author.name
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+      %th Image
+      %th Title
+      %th Description
+  %tbody
+    = render @author.books

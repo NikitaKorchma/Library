@@ -1,0 +1,8 @@
+%tr
+  %td
+  %td
+    = link_to book_path(book) do
+      = image_tag book.image.url(:image_author)
+  %td= book.title
+  %td= truncate(book.description, length: 30 )
+

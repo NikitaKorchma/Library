@@ -4,8 +4,13 @@
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     %ul.navbar-nav.w-100
-      %li.nav-item.ml-auto
-        %a.nav-link.dec-none
-          Some
+      %li.dropdown.nav-item.ml-auto
+        %a.dropdown-toggle.nav-link.btn.border-primary.text-primary.dec-none{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+          Categories
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          - Category.all.each do |category|
+            %li.dropdown-item{ class: ("bg-warning " if params[:category] == category.name) }
+              = link_to category.name, books_path(category: category.name), class: 'dec-none'
 
 
