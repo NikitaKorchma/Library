@@ -73,3 +73,6 @@ gem 'bootstrap'
 gem 'jquery-rails'
 # Haml
 gem "haml-rails", "~> 1.0"
+
+# Images
+gem 'paperclip', '~> 6.0.0'

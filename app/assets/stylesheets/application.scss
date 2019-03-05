@@ -15,3 +15,10 @@
  */
 
 @import "bootstrap";
+
+a.dec-none {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
